@@ -152,6 +152,7 @@ main .languages {
 }
 main .services {
   background-color: black;
+  height: 180vh;
 }
 .title {
   padding: 0;
@@ -172,6 +173,40 @@ main .my-projects {
 }
 main .contacts {
   background-color: black;
+}
+/*media queries*/
+@media (max-width:1160px) {
+  main .services {
+    height: 170vh;
+  }
+  main .projects .my-projects .role-model {
+    height: 60vh;
+  }
+  main .projects .my-projects .accessory-web {
+    height: 60vh;
+  }
+  main .projects .my-projects .accessory-web .contents h1 {
+    width: 80%;
+  }
+}
+@media (max-width: 1100px) {
+  main .projects .my-projects {
+    height: 250vh;
+  }
+  main .projects .my-projects .role-model {
+    height: 110vh;
+  }
+  main .projects .my-projects .accessory-web {
+    height: 110vh;
+  }
+   main .projects .my-projects .accessory-web .contents h1 {
+    width: 50%;
+   }
+}
+@media (max-width: 995px) {
+  main .services {
+    height: 200vh;
+  }
 }
 /*ABOUT PAGE*/
 .about {
@@ -202,7 +237,7 @@ main .contacts {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 10vw;
+  width: 15vw;
   height: 10vh;
   cursor: pointer;
   border-radius: 10px;
@@ -210,6 +245,7 @@ main .contacts {
 }
 .about .container .btn-read:hover {
   background-color: var(--secondary-color);
+  color: black;
 }
 .about .languages h1 {
   margin-bottom: 100px;
@@ -253,139 +289,255 @@ main .contacts {
 .percent {
   padding-left: 325px;
 }
+/*MEDIA  QUERIES*/
+@media (max-width: 1000px) {
+  .about {
+    height: 330vh;
+  }
+  .about .container {
+    display: flex;
+    flex-direction: column;
+    height: 190vh;
+    justify-content: center;
+    gap: 40px;
+  }
+  .about .container .contents {
+    width: 100%;
+    height: 60vh;
+  }
+  .about .container .btn-read {
+    width: 40%;
+  }
+  .about .container img {
+    width: 100%;
+    height: 90vh;
+  }
+  .about .languages .container {
+    height: 100vh;
+  }
+  .percent {
+    padding: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 630px) {
+  .about {
+    padding: 0;
+  }
+}
+@media (max-width: 400px) {
+  .about {
+    height: 360vh;
+  }
+  .about .container {
+    height: 165vh;
+  }
+  .about .container .contents {
+    height: 70vh;
+  }
+  .about .container .contents h1 {
+    width: 40%;
+  }
+  .about .container img {
+    height: 60vh;
+  }
+  .about .languages h1 {
+    width: 50%;
+  }
+  .about .languages .container {
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+    padding-left: 20px;
+  }
+  .progress-bar {
+    width: 90%;
+  }
+}
 /*SERVICES PAGE*/
 .services {
   padding: 70px 120px 150px;
   background-color: var(--default-color);
   color: #ddd;
 }
-.services .row {
-  margin-bottom: 50px;
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 50px;
 }
 .services h1 {
   width: 25vw;
 }
 
-.services .row h2 {
+.services h2 {
   height: 16vh;
   padding-top: 43px;
   text-align: center;
 }
-.services .row .web-dev {
+.services .web-dev {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .single-page-apps {
+.services .single-page-apps {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .responsiveness {
+.services .responsiveness {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .seo {
+.services .seo {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .user-friendly {
+.services .user-friendly {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .maintenance {
+.services .maintenance {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .optimization {
+.services .optimization {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .theming {
+.services .theming {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-.services .row .animations {
+.services .animations {
   border: 3px solid var(--secondary-color);
   border-radius: 10px;
   height: 70vh;
 }
-@media (max-width: 770px) {
+/*media queries*/
+@media (max-width: 1000px) {
   .services {
-    padding: 0;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .services h2 {
+    height: 9vh;
+  }
+  .services .web-dev {
+    height: 50vh;
+  }
+  .services .single-page-apps {
+    height: 50vh;
+  }
+  .services .responsiveness {
+    height: 50vh;
+  }
+  .services .seo {
+    height: 50vh;
+  }
+  .services .user-friendly {
+    height: 50vh;
+  }
+  .services .maintenance {
+    height: 50vh;
+  }
+  .services .optimization {
+    height: 50vh;
+  }
+  .services .theming {
+    height: 50vh;
+  }
+  .services .animations {
+    height: 50vh;
   }
 }
-@media (max-width: 500px) {
- .services .row .web-dev {
-    height: 80vh;
+@media (max-width: 700px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .services .row .single-page-apps {
-    height: 80vh;
+  .services .web-dev {
+    width: 90%;
+    height: 40vh;
   }
-  .services .row .responsiveness {
-    height: 80vh;
+  .services .single-page-apps {
+    height: 40vh;
+    width: 90%;
   }
-  .services .row .seo {
-    height: 80vh;
+  .services .responsiveness {
+    height: 40vh;
+    width: 90%;
   }
-  .services .row .user-friendly {
-    height: 80vh;
+  .services .seo {
+    height: 40vh;
+    width: 90%;
   }
-  .services .row .maintenance {
-    height: 80vh;
+  .services .user-friendly {
+    height: 40vh;
+    width: 90%;
   }
-  .services .row .optimization {
-    height: 80vh;
+  .services .maintenance {
+    height: 40vh;
+    width: 90%;
   }
-  .services .row .theming {
-    height: 80vh;
+  .services .optimization {
+    height: 45vh;
+    width: 90%;
   }
-  .services .row .animations {
-    height: 80vh;
+  .services .theming {
+    height: 50vh;
+    width: 90%;
+  }
+  .services .animations {
+    height: 50vh;
+    width: 90%;
   }
 }
-@media (max-width: 400px) {
-    .services .row p {
-    font-size: 20px;
-    line-height: 60px;
+@media (max-width: 570px) {
+  .services {
+    padding: 10px 10px 10px 10px;
   }
-  .services .row h2 {
-  text-decoration: underline;
-  text-decoration-color: #00bfe7;
 }
-  .services .row .web-dev {
-    height: 100vh;
+@media (max-width: 480px) {
+  .services {
+    height: 600vh;
   }
-  .services .row .single-page-apps {
-    height: 100vh;
+  .services .web-dev {
+    height: 55vh;
   }
-  .services .row .responsiveness {
-    height: 100vh;
+  .services .single-page-apps {
+    height: 55vh;
   }
-  .services .row .seo {
-    height: 100vh;
+  .services .responsiveness {
+    height: 55vh;
   }
-  .services .row .user-friendly {
-    height: 100vh;
+  .services .seo {
+    height: 55vh;
   }
-  .services .row .maintenance {
-    height: 100vh;
+  .services .user-friendly {
+    height: 55vh;
   }
-  .services .row .optimization {
-    height: 100vh;
+  .services .maintenance {
+    height: 55vh;
   }
-  .services .row .theming {
-    height: 100vh;
+  .services .optimization {
+    height: 55vh;
   }
-  .services .row .animations {
-    height: 100vh;
+  .services .theming {
+    height: 60vh;
+  }
+  .services .animations {
+    height: 60vh;
   }
 }
 /*CONTACT PAGE*/
@@ -400,7 +552,7 @@ main .contacts {
   padding-top: 20px;
 }
 .contacts {
-  padding: 20px 120px 120px;
+  padding: 90px 120px 120px;
   background-color: var(--default-color);
   color: #fff;
 }
@@ -471,9 +623,6 @@ main .contacts {
     flex-direction: column;
     padding-top: 50px;
   }
-  .contacts .contents h2 {
-    font-size: 45px;
-  }
   .contacts .contents .message {
     height: 80vh;
     width: 70vw;
@@ -487,7 +636,6 @@ main .contacts {
   .contacts .contents .message .btn-send {
     width: 70vw;
     margin: 0 auto;
-    font-size: 26px;
   }
   .contacts .contents .message form input {
     width: 70vw;
@@ -498,19 +646,9 @@ main .contacts {
   .contacts .contents .message form label {
     padding: 30px 0 10px;
     text-align: center;
-    font-size: 26px;
   }
   .contacts .contents .Email {
     gap: 70px;
-  }
-  .contacts .contents .Email h5 {
-    font-size: 30px;
-  }
-  .contacts .contents .Email p {
-    font-size: 25px;
-  }
-  .contacts .contents .Email .email a {
-    font-size: 25px;
   }
 }
 @media (max-width: 900px) {
@@ -518,26 +656,18 @@ main .contacts {
     height: 25vh;
   }
   .hero h1 {
-    font-size: 60px;
     width: 50vw;
   }
   .hero .contents {
     width: 60%;
   }
-  .hero .contents h5 {
-    font-size: 30px;
-  }
   .hero .contents .adress {
     padding: 0;
-  }
-  .hero .contents .adress p {
-    font-size: 25px;
   }
   .hero .contents .github,
   .linkldin a {
     width: 10vw;
     height: 10vh;
-    font-size: 40px;
   }
 }
 @media (max-width: 600px) {
@@ -566,14 +696,10 @@ main .contacts {
 }
 @media (max-width: 450px) {
   .hero {
-    height: 40vh;
+    height: 30vh;
   }
   .hero h1 {
     width: 60%;
-    font-size: 30px;
-  }
-  .hero .contents h5 {
-    font-size: 25px;
   }
   .contacts {
     height: 150vh;
@@ -596,14 +722,10 @@ main .contacts {
   .hero .contents .adress {
     padding-top: 10px;
   }
-  .hero .contents .adress p {
-    font-size: 18px;
-  }
   .hero .contents .github,
   .linkldin a {
     width: 10vw;
     height: 10vh;
-    font-size: 20px;
   }
 }
 /*PROJECTS PAGE*/
@@ -612,16 +734,73 @@ main .contacts {
   background-color: var(--default-color);
   color: #ddd;
 }
-.projects .my-projects .row .contents {
+.projects .my-projects .role-model {
+  display: flex;
+  justify-content: space-between;
+  width: 105%;
+  height: 65vh;
+  padding-top: 50px;
+}
+.projects .my-projects .role-model .contents {
+  width: 50%;
+  height: 60vh;
+}
+.projects .my-projects .role-model .image {
+  width: 40vw;
+  height: 50vh;
+}
+.projects .my-projects .accessory-web {
+  display: flex;
+  justify-content: space-between;
+  width: 105%;
+  height: 55vh;
+}
+.projects .my-projects .accessory-web .contents {
+  width: 50%;
+  height: 60vh;
+}
+.projects .my-projects .accessory-web .image {
+  width: 40vw;
+  height: 50vh;
+}
+.projects .my-projects .weather-web {
+  display: flex;
+  justify-content: space-between;
+  width: 105%;
+  height: 100vh;
+}
+.projects .my-projects .weather-web .contents {
+  width: 50%;
+  height: 60vh;
+}
+.projects .my-projects .weather-web .image {
+  width: 40vw;
+  height: 55vh;
+}
+.projects .my-projects .decorations-app {
+  display: flex;
+  justify-content: space-between;
+  height: 55vh;
+  width: 105%;
+}
+.projects .my-projects .decorations-app .contents {
+  width: 50%;
+  height: 60vh;
+}
+.projects .my-projects .decorations-app .image {
+  width: 40vw;
+  height: 50vh;
+}
+.projects .my-projects .contents {
   width: 50%;
   margin-bottom: 45px;
 }
-.projects .my-projects .row .contents p {
+.projects .my-projects .contents p {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 35px;
 }
-.projects .my-projects .row .contents a {
+.projects .my-projects .contents a {
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
@@ -636,9 +815,131 @@ main .contacts {
   color: #fff;
   text-decoration: none;
 }
-.projects .my-projects .row .contents a:hover {
+.projects .my-projects .contents a:hover {
   background-color: var(--secondary-color);
   color: #0a0119;
+}
+@media (max-width: 1330px) {
+  .projects .my-projects .role-model {
+    height: 35vh;
+  }
+  .projects .my-projects .accessory-web {
+    height: 35vh;
+  }
+  .projects .my-projects .decorations-app {
+    height: 35vh;
+  }
+  .projects .my-projects .weather-web {
+    height: 60vh;
+  }
+}
+@media (max-width:1100px) {
+  .projects .my-projects .role-model {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+  .projects .my-projects .role-model .contents {
+    width: 100%;
+    height: 35vh;
+  }
+  .projects .my-projects .role-model .contents a {
+    width: 50%;
+  }
+  .projects .my-projects .role-model .image {
+    width: 100%;
+  }
+   .projects .my-projects .accessory-web {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+  .projects .my-projects .accessory-web .contents {
+    width: 100%;
+    height: 35vh;
+  }
+  .projects .my-projects .accessory-web .contents a {
+    width: 50%;
+  }
+  .projects .my-projects .accessory-web .image {
+    width: 100%;
+  }
+   .projects .my-projects .decorations-app {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+  }
+  .projects .my-projects .decorations-app .contents {
+    width: 100%;
+    height: 35vh;
+  }
+  .projects .my-projects .decorations-app .contents a {
+    width: 50%;
+  }
+  .projects .my-projects .decorations-app .image {
+    width: 100%;
+  }
+  .projects .my-projects .weather-web {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    gap: 20px;
+  }
+  .projects .my-projects .weather-web .contents {
+    width: 100%;
+    height: 30vh;
+  }
+  .projects .my-projects .weather-web .contents a {
+    width: 50%;
+  }
+  .projects .my-projects .weather-web .image {
+    width: 100%;
+  }
+}
+@media (max-width:720px) {
+   .projects .my-projects .role-model {
+    height: 90vh;
+    padding-bottom: 100px;
+  }
+  .projects .my-projects h1 {
+    width: 60%;
+  }
+  .projects .my-projects .accessory-web {
+    height: 90vh;
+    padding-top: 120px;
+  }
+  .projects .my-projects .decorations-app {
+    height: 90vh;
+    padding-top: 120px;
+  }
+  .projects .my-projects .weather-web {
+    height: 120vh;
+    padding-top: 120px;
+  }
+}
+@media (max-width:500px) {
+  .projects .my-projects {
+    padding: 20px 10px 20px 10px;
+    height: 415vh;
+  }
+  .projects .my-projects .role-model .image {
+    width: 95%;
+  }
+  .projects .my-projects .accessory-web .image {
+    width: 95%;
+  }
+  .projects .my-projects .decorations-app .image {
+    width: 95%;
+  }
+  .projects .my-projects .weather-web .contents {
+    height: 50vh;
+  }
+  .projects .my-projects .weather-web {
+    height: 100vh;
+  }
+  .projects .my-projects .weather-web  {
+    width: 99%;
+  }
 }
 /*FOOTER SECTION*/
 footer {
@@ -673,16 +974,9 @@ footer p {
   margin-bottom: 50px;
 }
 @media (max-width: 1000px) {
-  footer h2 {
-    font-size: 30px;
-  }
+  
   footer .social-links {
     gap: 50px;
   }
-  footer .social-links h3 {
-    font-size: 25px;
-  }
-  footer .social-links a {
-    font-size: 20px;
-  }
+  
 }
