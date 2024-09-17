@@ -208,10 +208,45 @@ main .contacts {
     height: 200vh;
   }
 }
+@media (max-width: 880px) {
+  main .services {
+    height: 230vh;
+  }
+  main .services .web-dev {
+    height: 60vh;
+  }
+  main .services .user-friendly {
+    height: 60vh;
+  }
+  main .services .responsiveness {
+    height: 65vh;
+  }
+  main .services .seo {
+    height: 65vh;
+  }
+  main .services .single-page-apps {
+    height: 65vh;
+  }
+  main .services .optimization {
+    height: 65vh;
+  }
+}
+@media (max-width: 750px) {
+  main .services {
+    display: flex;
+    flex-direction: column;
+    height: 400vh;
+  }
+}
+@media (max-width: 400px) {
+  main .about .languages {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*ABOUT PAGE*/
 .about {
-  padding: 70px 120px 150px;
-  background-color: var(--default-color);
+  padding: 70px 120px 150px; background-color: var(--default-color);
   color: #ddd;
 }
 .about .container {
