@@ -368,7 +368,10 @@ main .contacts {
     height: 165vh;
   }
   .about .container .contents {
-    height: 70vh;
+    height: 85vh;
+  }
+  .about .container .contents .btn-read {
+    width: 40vw;
   }
   .about .container .contents h1 {
     width: 40%;
@@ -384,6 +387,12 @@ main .contacts {
     flex-direction: column;
     height: 150vh;
     padding-left: 20px;
+  }
+  .about .languages .container .language-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20vh;
   }
   .progress-bar {
     width: 90%;
